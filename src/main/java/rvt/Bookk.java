@@ -2,10 +2,11 @@ package rvt;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+// Main koda fails
 public class Bookk {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Bookk> books = new ArrayList<>();
+        ArrayList<Book> books = new ArrayList<>();
 
         while (true) {
             System.out.print("Title: ");
@@ -21,46 +22,25 @@ public class Bookk {
             System.out.print("Publication year: ");
             int year = Integer.parseInt(scanner.nextLine());
 
-            books.add(new Bookk(title, pages, year));
+            books.add(new Book(title, pages, year));
         }
     System.out.println("\nWhat information will be printed?");
     String choice = scanner.nextLine();
 
     if (choice.equals("everything")) {
         for (int i = 0; i < books.size(); i++ ) {
-            Bookk b = books.get(i);
+            Book b = books.get(i);
             System.out.println(b);
         }
     }   
     else if (choice.equals("name")) {
         for (int i = 0; i < books.size(); i++) {
-            Bookk b = books.get(i);
+            Book b = books.get(i);
             System.out.println(b.getTitle());
 
         }
     }
 
     }
-    static class Book {
-        private String title;
-        private int pages;
-        private int publicationYear;
     
-        public Book(String title, int pages, int publicationYear){
-
-        this.title = title;
-        this.pages = pages;
-        this.publicationYear = publicationYear;
-        }
-    
-        public String getTitle() {
-            return this.title;
-        }
-    
-        public String toString() {
-            return this.title + ", " + this.pages + " pages, " + this.publicationYear;
-         }
-    }
-
-
 }
