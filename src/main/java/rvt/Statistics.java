@@ -30,17 +30,21 @@ public class Statistics {
         return sum / (double) count;
 
     }
+    
     public int evensum() {
         return evensum;
 
     }
+    
     public int oddsum() {
         return oddsum;
 
     }
+    
     public void addEvenNumber(int evennum) {
         evensum += evennum;
     }
+    
     public void addOddNumber(int oddnum) {
         oddsum += oddnum;
     }
